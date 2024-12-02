@@ -42,12 +42,16 @@ public class Task1
     }
 
 
+/**
+ * @key - билет
+ * @value - гость
+ */
+private final HashMap<Ticket, Goods> ticketGoods = new HashMap<>();
 
     /**
      * Получить товары по билету
      */
     public Goods getGoods(Ticket ticket) {
-        //TODO
-        return null;
+        return ticketGoods.get(ticket);
     }
 }

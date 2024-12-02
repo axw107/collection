@@ -38,7 +38,9 @@ public class Task2
      * Возвращает дубликаты пользователей, которые есть в обеих коллекциях
      */
     public static List<User> findDuplicates(Collection<User> collA, Collection<User> collB) {
-        //TODO
-        return List.of();
+        HashSet<User> setCollA = new HashSet<>(collA);
+        HashSet<User> setCollB = new HashSet<>(collB);
+        setCollA.retainAll(setCollB);
+        return new ArrayList<>(setCollA);
     }
 }
